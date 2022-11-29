@@ -444,7 +444,7 @@ works with any Dart SDK that's version 2.10.0 or higher:
 
 ```yaml
 environment:
-  sdk: '>=2.10.0 <3.0.0'
+  sdk: '^2.10.0'
 ```
 
 Pub tries to find the latest version of a package whose SDK constraint works
@@ -459,17 +459,8 @@ pubspec.yaml has no lower-bound SDK constraint.
 You should edit pubspec.yaml to contain an SDK constraint:
 
 environment:
-  sdk: '>=2.10.0 <3.0.0'
+  sdk: '^2.12.0'
 ```
-
-{{site.alert.warning}}
-  Caret syntax (`^`) is a compact way to represent version ranges, 
-  but **don't use it for the SDK constraint.** 
-  Instead, **include an upper bound for the SDK** (`<3.0.0`, usually). 
-  For more information, 
-  see the [Caret syntax](/tools/pub/dependencies#caret-syntax) documentation.
-{{site.alert.end}}
-
 
 #### Flutter SDK constraints
 
